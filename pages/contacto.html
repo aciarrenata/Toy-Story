@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universo Toy Story - Contacto</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="pagina-interna">
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="../index.html" class="nav-btn">🏠 Home</a>
+        <a href="peliculas.html" class="nav-btn peliculas">🎬 Películas</a>
+        <a href="personajes.html" class="nav-btn personajes">⭐ Personajes</a>
+        <a href="galeria.html" class="nav-btn galeria">🖼️ Galería</a>
+        <a href="curiosidades.html" class="nav-btn curiosidades">💡 Curiosidades</a>
+        <a href="contacto.html" class="nav-btn active contacto">✉️ Contacto</a>
+    </nav>
+
+    <!-- ENCABEZADO -->
+    <section class="page-header contacto-header">
+        <h1>✉️ Contacto</h1>
+        <p>Conéctate con la comunidad de Toy Story</p>
+    </section>
+
+    <!-- CONTENIDO -->
+    <section class="contacto-grid">
+
+        <!-- FORMULARIO -->
+        <div class="contacto-form-card">
+            <h2>📨 Envíanos un mensaje</h2>
+            <div class="form-grupo">
+                <label>👤 Nombre</label>
+                <input type="text" placeholder="Tu nombre completo" required>
+            </div>
+            <div class="form-grupo">
+                <label>✉️ Email</label>
+                <input type="email" placeholder="tu@email.com" required>
+            </div>
+            <div class="form-grupo">
+                <label>💬 Mensaje</label>
+                <textarea placeholder="Escribe tu mensaje aquí..." rows="5" required></textarea>
+            </div>
+            <button type="button" class="btn-enviar" onclick="enviarMensaje()">📨 Enviar Mensaje</button>
+        </div>
+
+        <!-- REDES SOCIALES -->
+        <div class="contacto-redes-card">
+            <h2>✉️ Redes Sociales</h2>
+            <p>Únete a nuestra comunidad en las redes sociales y mantente al día con todo lo relacionado al universo Toy Story.</p>
+            <div class="redes">
+                <a href="#" class="red facebook">
+                    <span>f</span>
+                    <div>
+                        <strong>Facebook</strong>
+                        <p>Síguenos en Facebook para noticias y actualizaciones</p>
+                    </div>
+                </a>
+                <a href="#" class="red twitter">
+                    <span>🐦</span>
+                    <div>
+                        <strong>Twitter</strong>
+                        <p>Tweets sobre Toy Story y Pixar</p>
+                    </div>
+                </a>
+                <a href="#" class="red instagram">
+                    <span>📷</span>
+                    <div>
+                        <strong>Instagram</strong>
+                        <p>Fotos y videos exclusivos de Toy Story</p>
+                    </div>
+                </a>
+                <a href="#" class="red youtube">
+                    <span>▶</span>
+                    <div>
+                        <strong>YouTube</strong>
+                        <p>Trailers, clips y contenido especial</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- FRASE FINAL -->
+    <div class="frase-final">
+        <h2>¡Hasta el infinito... y más allá!</h2>
+        <p>Gracias por visitar el Universo Toy Story 🚀</p>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-col">
+            <h3>🚀 Universo Toy Story</h3>
+            <p>La web dedicada a celebrar la magia de Toy Story y sus inolvidables personajes.</p>
+        </div>
+        <div class="footer-col">
+            <h3>Enlaces Rápidos</h3>
+            <ul>
+                <li><a href="peliculas.html">• Películas</a></li>
+                <li><a href="personajes.html">• Personajes</a></li>
+                <li><a href="galeria.html">• Galería</a></li>
+                <li><a href="curiosidades.html">• Curiosidades</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h3>Frase Favorita</h3>
+            <p><em>"¡Hasta el infinito… y más allá!"</em></p>
+            <p>- Buzz Lightyear</p>
+        </div>
+        <div class="footer-bottom">
+            <p>Hecho con 💜 para los fans de Toy Story</p>
+            <p>© 2026 Universo Toy Story - Un tributo a Pixar Animation Studios</p>
+        </div>
+    </footer>
+<script>
+    
+    function enviarMensaje() {
+        const nombre = document.querySelector('.form-grupo input[type="text"]').value;
+        const email = document.querySelector('.form-grupo input[type="email"]').value;
+        const mensaje = document.querySelector('.form-grupo textarea').value;
+
+        if (nombre === '' || email === '' || mensaje === '') {
+            alert('Por favor completá todos los campos antes de enviar.');
+        } else {
+            alert('¡Mensaje enviado con éxito! Gracias ' + nombre + ' 🚀');
+            document.querySelector('.form-grupo input[type="text"]').value = '';
+            document.querySelector('.form-grupo input[type="email"]').value = '';
+            document.querySelector('.form-grupo textarea').value = '';
+        }
+    }
+    
+</script>
+</body>
+</html>
