@@ -129,5 +129,19 @@
         </div>
     </footer>
 
+<!-- LIGHTBOX -->
+<div id="lightbox" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.85); z-index:9999; align-items:center; justify-content:center;" onclick="this.style.display='none'">
+  <img id="lightbox-img" src="" style="max-width:90%; max-height:90vh; border-radius:12px; box-shadow:0 0 40px rgba(0,0,0,0.5);">
+</div>
+
+<script>
+  document.querySelectorAll('.galeria-item img').forEach(img => {
+    img.style.cursor = 'pointer';
+    img.addEventListener('click', function() {
+      document.getElementById('lightbox-img').src = this.src;
+      document.getElementById('lightbox').style.display = 'flex';
+    });
+  });
+</script>
 </body>
 </html>
